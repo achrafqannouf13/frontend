@@ -1,0 +1,5 @@
+.book-list{
+margin-top: 20px; /* Ajoute de l'espace en haut */
+border: 1px solid black; /* Ajoute une bordure */
+padding: 10px; /* Ajoute un espace intérieur */
+}

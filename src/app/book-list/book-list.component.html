@@ -1,0 +1,128 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  
+      <!-- Column definitions -->
+      <ng-container matColumnDef="bookID">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let book"> {{ book.bookID }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef="let book"> {{ book.title }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
+        <td mat-cell *matCellDef="let book"> {{ book.author }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="publicationDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Publication Date </th>
+        <td mat-cell *matCellDef="let book"> {{ book.publicationDate }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="genre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Genre </th>
+        <td mat-cell *matCellDef="let book"> {{ book.genre }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let book"> {{ book.price | currency }} </td>
+      </ng-container>
+  
+      <!-- Table rows -->
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+  
+    <div class="paginator-container" >
+        <mat-paginator id="pagination" [pageSizeOptions]="[5, 6, 7, 8]"></mat-paginator>
+      </div>
+
+
+      <div class="buttons-container">
+        <!-- partie de ajouter -->
+        <div>
+          
+          <button id="id01" (click)="openModaladd()" style="width:auto;">Ajouter</button>
+        
+          <div [ngStyle]="{'display': showModaladd ? 'block' : 'none' }" class="modaladd" id="id01" >
+            <div class="container">
+              <label for="bookID">ID</label>
+              <input type="bookID" placeholder="Enter ID" name="bookID" [(ngModel)]="bookID" required>
+
+              <label for="title"><b>Title</b></label>
+              <input type="text" placeholder="Enter Title" name="title" [(ngModel)]="title" required>
+        
+              <label for="author"><b>Author</b></label>
+              <input placeholder="Enter Author" name="author" [(ngModel)]="author"  required>
+    
+              <label for="publicationDate"><b>Publication Date</b></label>
+              <input type="date" placeholder="Enter Publication Date" name="publicationDate" [(ngModel)]="publicationDate" required>
+        
+              <label for="genre"><b>Genre</b></label>
+              <input placeholder="Enter Genre" name="genre" [(ngModel)]="genre" required>
+        
+              <label for="price"><b>Price</b></label>
+              <input placeholder="Enter Price" name="price" [(ngModel)]="price" required>
+              <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+              <div class="btnajj">
+              <button type="submit" (click)="createBooks()">Ajouter</button>          
+              <button type="button" (click)=" closeModaladd()">Return</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- partie de supprimer -->
+        <div>
+          <button id="id02" (click)="openModalsupp()" style="width:auto;">Supprimer</button>
+          <div [ngStyle]="{'display': showModalsupp ? 'block' : 'none' }" class="modalsupp" id="id02" >
+            <div class="container">
+              <label for="bookID">ID</label>
+              <input type="bookID" placeholder="Enter ID" name="bookID" [(ngModel)]="bookID" required>
+              <button type="submit" (click)="deleteBooks()">Supprimer</button>          
+              <button type="button" (click)=" closeModalsupp()">Return</button>
+              </div>
+          </div>
+        </div>
+        <!-- partie de modifier -->
+        <div>
+          <button id="id03" (click)="openModalmod()" style="width:auto;">Modifier</button>
+        
+          <div [ngStyle]="{'display': showModalmod ? 'block' : 'none' }" class="modalmod" id="id03" >
+            <div class="container">
+              <label for="bookID">ID</label>
+              <input type="bookID" placeholder="Enter ID" name="bookID" [(ngModel)]="bookID" required>
+
+              <label for="title"><b>Title</b></label>
+              <input type="text" placeholder="Enter Title" name="title" [(ngModel)]="title" required>
+        
+              <label for="author"><b>Author</b></label>
+              <input placeholder="Enter Author" name="author" [(ngModel)]="author"  required>
+    
+              <label for="publicationDate"><b>Publication Date</b></label>
+              <input type="date" placeholder="Enter Publication Date" name="publicationDate" [(ngModel)]="publicationDate" required>
+        
+              <label for="genre"><b>Genre</b></label>
+              <input placeholder="Enter Genre" name="genre" [(ngModel)]="genre" required>
+        
+              <label for="price"><b>Price</b></label>
+              <input placeholder="Enter Price" name="price" [(ngModel)]="price" required>
+              <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+              <div class="btnmod">
+              <button type="submit" (click)=" updateBooks()">Modifier</button>          
+              <button type="button" (click)=" closeModalmod()">Return</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+  </div>
+  

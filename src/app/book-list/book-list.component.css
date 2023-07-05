@@ -1,0 +1,143 @@
+.mat-elevation-z8 {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  padding: 5px; /* Ajoute un espacement intérieur */
+  margin-bottom: 30px; /* Ajoute un espacement en bas */
+  margin-top: 20px;
+}
+
+
+#pagination{
+  display: flex;
+  background-color: rgb(63, 61, 61);
+  color: rgb(255, 255, 255);
+  justify-content: center; /* Aligne le paginateur à droite */
+  margin-top: 50px;
+  font-size: 20px;
+  
+}
+
+
+table {
+  background-color: white;
+  border: 15px;
+  border-color: black;
+}
+
+
+table td {
+  color: black;
+}
+table th {
+  color: black;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttons-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .buttons-container button:hover {
+    background-color: rgb(106, 241, 241);
+  }
+  
+  .buttons-container button:active {
+    background-color: dodgerblue;
+  }
+  .modaladd {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 2px;
+  } 
+  .modaladd .container {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 15px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  } 
+  .modalsupp {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 2px;
+  } 
+  .modalsupp .container {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 15px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  } 
+  .modalmod {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 2px;
+  } 
+  .modalmod .container {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 15px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  } 
+  input {
+    width: 100%;
+    padding: 20px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+  .btnajj{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .btnmod{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .error-message {
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  

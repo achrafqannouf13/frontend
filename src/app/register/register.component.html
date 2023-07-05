@@ -1,0 +1,28 @@
+<div class="cnt">
+    <div class="container">
+      <div class="snup">
+        <h1>Sign Up</h1>
+      </div>
+          
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="email" required>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="password" required>
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" [(ngModel)]="passwordRepeat" required>
+  
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+  
+      <div class="clearfix">
+        <button routerLink="/login" type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" (click)="register()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+  
